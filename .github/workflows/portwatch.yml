@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/5 * * * *"   # alle 5 Minuten (kürzer erlaubt GitHub nicht)
   workflow_dispatch:         # erlaubt manuelles Starten per Knopf
+    inputs:
+      test:
+        description: "Nur Testnachricht an Discord senden"
+        type: boolean
+        default: false
 
 permissions:
   contents: write            # damit der Bot sich den letzten Stand merken kann
@@ -20,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: PortWatch prüfen
-        run: python3 portwatch_bot.py --once
+        run: python3 portwatch_bot.py ${{ inputs.test && '--test' || '--once' }}
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           PORTWATCH_PING: ${{ secrets.PORTWATCH_PING }}
