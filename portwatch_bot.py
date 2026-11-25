@@ -71,7 +71,8 @@ TRACKS = [
 # Hilfsfunktionen
 # ---------------------------------------------------------------------------
 def log(msg):
-    print("\r" + " " * 70 + "\r", end="")
+    if sys.stdout.isatty():
+        print("\r" + " " * 70 + "\r", end="")
     print(time.strftime("[%Y-%m-%d %H:%M:%S]"), msg, flush=True)
 
 
@@ -362,6 +363,7 @@ def check(dry_run=False):
         return  # Feed unverändert
     old = load_state()
     if old and old.get("updated") and old.get("updated") == feed.get("updated"):
+        log(f"Unverändert (Stand {feed.get('updated')}).")
         return  # gleicher Stand wie zuletzt
     if old is None:
         new = snapshot(feed)

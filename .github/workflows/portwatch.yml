@@ -1,9 +1,12 @@
 name: PortWatch Bot
 
+# Ein Lauf bleibt ~5 Stunden aktiv und prüft darin jede Minute.
+# Der Zeitplan sorgt nur dafür, dass immer ein neuer Lauf bereitsteht –
+# auch wenn GitHub ihn verspätet startet, gibt es so keine Lücken.
 on:
   schedule:
-    - cron: "*/5 * * * *"   # alle 5 Minuten (kürzer erlaubt GitHub nicht)
-  workflow_dispatch:         # erlaubt manuelles Starten per Knopf
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
     inputs:
       test:
         description: "Nur Testnachricht an Discord senden"
@@ -11,28 +14,39 @@ on:
         default: false
 
 permissions:
-  contents: write            # damit der Bot sich den letzten Stand merken kann
+  contents: write
 
 concurrency:
-  group: portwatch
+  group: portwatch            # immer nur ein Lauf aktiv, einer wartet
   cancel-in-progress: false
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 330
+    env:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      PORTWATCH_PING: ${{ secrets.PORTWATCH_PING }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: PortWatch prüfen
-        run: python3 portwatch_bot.py ${{ inputs.test && '--test' || '--once' }}
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          PORTWATCH_PING: ${{ secrets.PORTWATCH_PING }}
+      - name: Testnachricht
+        if: ${{ inputs.test }}
+        run: python3 portwatch_bot.py --test
 
-      - name: Stand speichern
+      - name: PortWatch beobachten (jede Minute)
+        if: ${{ !inputs.test }}
         run: |
           git config user.name "portwatch-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add portwatch_state.json
-          git diff --cached --quiet || (git commit -m "Stand aktualisiert" && git push)
+          end=$(( $(date +%s) + 300*60 ))   # ~5 Stunden
+          while [ "$(date +%s)" -lt "$end" ]; do
+            python3 -u portwatch_bot.py --once || true
+            git add portwatch_state.json
+            if ! git diff --cached --quiet; then
+              git commit -qm "Stand aktualisiert"
+              git pull -q --rebase origin main || true
+              git push -q || true
+            fi
+            sleep 60
+          done
