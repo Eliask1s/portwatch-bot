@@ -1,0 +1,33 @@
+name: PortWatch Bot
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # alle 5 Minuten (kürzer erlaubt GitHub nicht)
+  workflow_dispatch:         # erlaubt manuelles Starten per Knopf
+
+permissions:
+  contents: write            # damit der Bot sich den letzten Stand merken kann
+
+concurrency:
+  group: portwatch
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: PortWatch prüfen
+        run: python3 portwatch_bot.py --once
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          PORTWATCH_PING: ${{ secrets.PORTWATCH_PING }}
+
+      - name: Stand speichern
+        run: |
+          git config user.name "portwatch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add portwatch_state.json
+          git diff --cached --quiet || (git commit -m "Stand aktualisiert" && git push)
