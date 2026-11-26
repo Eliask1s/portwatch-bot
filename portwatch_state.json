@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T04:18:11.884Z",
+ "updated": "2026-11-26T05:32:10.991Z",
  "news_ids": [
   "2026-11-25-belobug-way-ahead",
   "2026-11-25-zettrox-no-crashes",
@@ -48,7 +48,7 @@
     "playable": 1,
     "story": 0.5,
     "render": 0.85,
-    "fps": 4,
+    "fps": 8,
     "stability": 0.7
    },
    "stars": 1671,
@@ -151,7 +151,7 @@
     "menu": 1,
     "world": 1,
     "playable": 1,
-    "story": 0.6,
+    "story": 0.8,
     "render": 0.76,
     "fps": 16,
     "stability": 0.9
@@ -172,7 +172,7 @@
     "menu": 1,
     "world": 1,
     "playable": 1,
-    "story": 0.6,
+    "story": 0.8,
     "render": 0.85,
     "fps": 4,
     "stability": 0.8
@@ -193,7 +193,7 @@
     "menu": 1,
     "world": 1,
     "playable": 1,
-    "story": 0.6,
+    "story": 0.8,
     "render": 0.7,
     "fps": 15,
     "stability": 0.7
@@ -214,7 +214,7 @@
     "menu": 1,
     "world": 1,
     "playable": 1,
-    "story": 0.6,
+    "story": 0.8,
     "render": 0.8,
     "fps": 3,
     "stability": "unknown"
@@ -256,9 +256,9 @@
     "menu": 1,
     "world": 1,
     "playable": 1,
-    "story": 0.6,
-    "render": 0.75,
-    "fps": 25,
+    "story": 0.8,
+    "render": 0.85,
+    "fps": 20,
     "stability": 0.85
    },
    "stars": 0,
