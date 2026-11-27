@@ -1,6 +1,7 @@
 {
- "updated": "2026-11-27T16:18:23.809Z",
+ "updated": "2026-11-27T19:13:01.931Z",
  "news_ids": [
+  "2026-11-27-belobug-dmca",
   "2026-11-26-multiplayer-running",
   "2026-11-25-belobug-way-ahead",
   "2026-11-25-zettrox-no-crashes",
@@ -52,7 +53,7 @@
     "fps": 10,
     "stability": 0.8
    },
-   "stars": 474,
+   "stars": 485,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -73,7 +74,7 @@
     "fps": 20,
     "stability": 1
    },
-   "stars": 1009,
+   "stars": 1826,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -94,10 +95,10 @@
     "fps": 22,
     "stability": 1
    },
-   "stars": 4112,
+   "stars": 0,
    "archived": false,
    "missing": false,
-   "nuked": false,
+   "nuked": true,
    "proof": "https://www.reddit.com/r/FitGirlRepack/comments/1y67xnd/belo_top_dawg/"
   },
   "dexnom": {
@@ -115,7 +116,7 @@
     "fps": 3,
     "stability": 0.7
    },
-   "stars": 1369,
+   "stars": 1382,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -157,7 +158,7 @@
     "fps": 4,
     "stability": 0.4
    },
-   "stars": 238,
+   "stars": 239,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -178,10 +179,10 @@
     "fps": 16,
     "stability": 0.9
    },
-   "stars": 1924,
+   "stars": 0,
    "archived": false,
    "missing": false,
-   "nuked": false,
+   "nuked": true,
    "proof": "https://www.reddit.com/r/FitGirlRepack/comments/1y5k8xu/actually_playable/"
   },
   "notnozy": {
@@ -325,7 +326,7 @@
     "fps": 3,
     "stability": "unknown"
    },
-   "stars": 3339,
+   "stars": 3344,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -346,7 +347,7 @@
     "fps": 1,
     "stability": "unknown"
    },
-   "stars": 13690,
+   "stars": 13732,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -367,7 +368,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 1852,
+   "stars": 1851,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -388,7 +389,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 8693,
+   "stars": 8702,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -409,7 +410,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 268,
+   "stars": 267,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -430,7 +431,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 394,
+   "stars": 395,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -535,7 +536,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 2033,
+   "stars": 2038,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -556,7 +557,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 497,
+   "stars": 511,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -598,7 +599,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 236,
+   "stars": 237,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -619,7 +620,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 80,
+   "stars": 81,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -892,7 +893,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 15,
+   "stars": 16,
    "archived": false,
    "missing": false,
    "nuked": false,
