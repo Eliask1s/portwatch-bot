@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T22:08:55.566Z",
+ "updated": "2026-11-28T01:29:17.988Z",
  "news_ids": [
   "2026-11-27-belobug-dmca",
   "2026-11-26-multiplayer-running",
@@ -53,7 +53,7 @@
     "fps": 10,
     "stability": 0.8
    },
-   "stars": 499,
+   "stars": 510,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -74,7 +74,7 @@
     "fps": 20,
     "stability": 1
    },
-   "stars": 2742,
+   "stars": 3386,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -116,7 +116,7 @@
     "fps": 3,
     "stability": 0.7
    },
-   "stars": 1422,
+   "stars": 1451,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -158,7 +158,7 @@
     "fps": 4,
     "stability": 0.4
    },
-   "stars": 240,
+   "stars": 243,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -326,7 +326,7 @@
     "fps": 3,
     "stability": "unknown"
    },
-   "stars": 3357,
+   "stars": 3360,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -347,7 +347,7 @@
     "fps": 1,
     "stability": "unknown"
    },
-   "stars": 13780,
+   "stars": 13822,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -368,7 +368,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 1850,
+   "stars": 1848,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -389,7 +389,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 8722,
+   "stars": 8738,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -410,7 +410,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 267,
+   "stars": 268,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -431,7 +431,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 397,
+   "stars": 399,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -536,7 +536,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 2042,
+   "stars": 2041,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -557,7 +557,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 517,
+   "stars": 529,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -620,7 +620,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 81,
+   "stars": 82,
    "archived": false,
    "missing": false,
    "nuked": false,
@@ -872,7 +872,7 @@
     "fps": 0,
     "stability": "unknown"
    },
-   "stars": 95,
+   "stars": 96,
    "archived": false,
    "missing": false,
    "nuked": false,
